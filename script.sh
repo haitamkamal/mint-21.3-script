@@ -12,7 +12,7 @@ echo "Installing Discord..."
 wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 dpkg -i discord.deb || apt --fix-broken install -y
 rm -f discord.deb
-echo "Installing vencord"
+echo "Installing Vencord"
 sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
 echo "Installing Google Chrome..."
 wget -q -O google-chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
@@ -33,10 +33,6 @@ echo "Installing Free Download Manager..."
 wget -O freedownloadmanager.deb "https://dn3.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
 dpkg -i freedownloadmanager.deb || apt --fix-broken install -y
 rm -f freedownloadmanager.deb
-echo "Installing wget and curl..."
-apt install -y wget curl
-echo "Installing Git..."
-apt install -y git
 echo "Installing Audacity..."
 apt install -y audacity
 echo "Installing OBS Studio..."
@@ -74,4 +70,4 @@ fi
 echo "Final system cleanup..."
 apt update && apt upgrade -y
 apt autoremove -y && apt clean
-echo "script finish :)"
+echo "Script have finished :)"
